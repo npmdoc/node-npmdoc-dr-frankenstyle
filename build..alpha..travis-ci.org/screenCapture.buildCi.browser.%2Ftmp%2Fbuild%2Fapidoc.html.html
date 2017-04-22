@@ -1,0 +1,1194 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/pivotal-cf/dr-frankenstyle#readme">dr-frankenstyle (v0.2.8)</a>
+</h1>
+<h4>Resolves CSS dependencies between node packages</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dr-frankenstyle">module dr-frankenstyle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dr-frankenstyle">
+            function <span class="apidocSignatureSpan"></span>dr-frankenstyle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.</span>dependency_graph
+            <span class="apidocSignatureSpan">(whitelist)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.railsUrls">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.</span>railsUrls
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dr-frankenstyle.</span>dependency_graph.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dr-frankenstyle.</span>index</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dr-frankenstyle.dependency_graph">module dr-frankenstyle.dependency_graph</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph.dependency_graph">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.</span>dependency_graph
+            <span class="apidocSignatureSpan">(whitelist)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dr-frankenstyle.dependency_graph.prototype">module dr-frankenstyle.dependency_graph.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.dependencies">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>dependencies
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.installedPackagesLookup">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>installedPackagesLookup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.orderedStyleDependencies">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>orderedStyleDependencies
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.readJson">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>readJson
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.styleDependencies">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>styleDependencies
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.styleDependencyLookup">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>styleDependencyLookup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dr-frankenstyle.index">module dr-frankenstyle.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.index.copyAssets">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.index.</span>copyAssets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.index.generateCss">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.index.</span>generateCss
+            <span class="apidocSignatureSpan">(cssFileStream)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dr-frankenstyle.index.setup">
+            function <span class="apidocSignatureSpan">dr-frankenstyle.index.</span>setup
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dr-frankenstyle" id="apidoc.module.dr-frankenstyle">module dr-frankenstyle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dr-frankenstyle" id="apidoc.element.dr-frankenstyle.dr-frankenstyle">
+        function <span class="apidocSignatureSpan"></span>dr-frankenstyle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function drFrankenstyle() {
+  var setupStream = _dev.setup({ cached: false });
+
+  return _eventStream.merge(setupStream.pipe(_dev.copyAssets()), setupStream.pipe(_dev.generateCss(_cssFilesFromDependencies2['default
+']())));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph" id="apidoc.element.dr-frankenstyle.dependency_graph">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.</span>dependency_graph
+        <span class="apidocSignatureSpan">(whitelist)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DependencyGraph(whitelist) {
+  var rootPackageDir = arguments.length &lt;= 1 || arguments[1] === undefined ? process.cwd() : arguments[1];
+
+  _classCallCheck(this, DependencyGraph);
+
+  this.whitelist = whitelist;
+  this.rootPackageDir = rootPackageDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.railsUrls" id="apidoc.element.dr-frankenstyle.railsUrls">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.</span>railsUrls
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">railsUrls = function () {
+  return _through22['default'].obj(function (file, encoding, callback) {
+    if (_path2['default'].extname(file.path) === '.css') {
+      var newContents = file.contents.toString().replace(/url\(/g, 'asset-url(');
+      file.contents = new Buffer(newContents);
+    }
+    callback(null, file);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+dr-frankenstyle --rails &lt;output-dir&gt;
+```
+
+Or, if you are using the API:
+
+```js
+drFrankenstyle()
+  .pipe(drFrankenstyle.<span class="apidocCodeKeywordSpan">railsUrls</span>())
+  .pipe(fs.dest('&lt;output-dir&gt;'));
+```
+
+### Whitelist
+
+If you want Dr. F to only look at specific top level dependencies, you can create a FrankenFile (.drfrankenstylerc).
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dr-frankenstyle.dependency_graph" id="apidoc.module.dr-frankenstyle.dependency_graph">module dr-frankenstyle.dependency_graph</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph.dependency_graph" id="apidoc.element.dr-frankenstyle.dependency_graph.dependency_graph">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.</span>dependency_graph
+        <span class="apidocSignatureSpan">(whitelist)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DependencyGraph(whitelist) {
+  var rootPackageDir = arguments.length &lt;= 1 || arguments[1] === undefined ? process.cwd() : arguments[1];
+
+  _classCallCheck(this, DependencyGraph);
+
+  this.whitelist = whitelist;
+  this.rootPackageDir = rootPackageDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dr-frankenstyle.dependency_graph.prototype" id="apidoc.module.dr-frankenstyle.dependency_graph.prototype">module dr-frankenstyle.dependency_graph.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.dependencies" id="apidoc.element.dr-frankenstyle.dependency_graph.prototype.dependencies">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>dependencies
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dependencies() {
+  var rootPackageJson, installedPackagesLookup, pkg, result, packagesToCheck, _iterator, _isArray, _i, _ref, dependencyName, dependency
+;
+
+  return _regeneratorRuntime.async(function dependencies$(context$2$0) {
+    while (1) switch (context$2$0.prev = context$2$0.next) {
+      case 0:
+        context$2$0.next = 2;
+        return _regeneratorRuntime.awrap(this.readJson('package.json'));
+
+      case 2:
+        rootPackageJson = context$2$0.sent;
+        context$2$0.next = 5;
+        return _regeneratorRuntime.awrap(this.installedPackagesLookup());
+
+      case 5:
+        installedPackagesLookup = context$2$0.sent;
+
+        if (this.whitelist !== null) {
+          for (pkg in rootPackageJson.dependencies) {
+            if (this.whitelist.indexOf(pkg) === -1) {
+              delete rootPackageJson.dependencies[pkg];
+            }
+          }
+        }
+
+        result = new _Set();
+        packagesToCheck = [rootPackageJson];
+
+      case 9:
+        if (!packagesToCheck.length) {
+          context$2$0.next = 35;
+          break;
+        }
+
+        pkg = packagesToCheck.shift();
+
+        if (pkg) {
+          context$2$0.next = 13;
+          break;
+        }
+
+        return context$2$0.abrupt('continue', 9);
+
+      case 13:
+        _iterator = _Object$keys(Object(pkg.dependencies)), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ?
+_iterator : _getIterator(_iterator);
+
+      case 14:
+        if (!_isArray) {
+          context$2$0.next = 20;
+          break;
+        }
+
+        if (!(_i &gt;= _iterator.length)) {
+          context$2$0.next = 17;
+          break;
+        }
+
+        return context$2$0.abrupt('break', 33);
+
+      case 17:
+        _ref = _iterator[_i++];
+        context$2$0.next = 24;
+        break;
+
+      case 20:
+        _i = _iterator.next();
+
+        if (!_i.done) {
+          context$2$0.next = 23;
+          break;
+        }
+
+        return context$2$0.abrupt('break', 33);
+
+      case 23:
+        _ref = _i.value;
+
+      case 24:
+        dependencyName = _ref;
+        dependency = installedPackagesLookup[dependencyName];
+
+        if (!dependency) console.error('ERROR: missing dependency "' + dependencyName + '"');
+
+        if (!result.has(dependency)) {
+          context$2$0.next = 29;
+          break;
+        }
+
+        return context$2$0.abrupt('continue', 31);
+
+      case 29:
+        result.add(dependency);
+        packagesToCheck.push(dependency);
+
+      case 31:
+        context$2$0.next = 14;
+        break;
+
+      case 33:
+        context$2$0.next = 9;
+        break;
+
+      case 35:
+        return context$2$0.abrupt('return', _Array$from(result));
+
+      case 36:
+      case 'end':
+        return context$2$0.stop();
+    }
+  }, null, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+
+  DependencyGraph.prototype.styleDependencies = function styleDependencies() {
+    return _regeneratorRuntime.async(function styleDependencies$(context$2$0) {
+      while (1) switch (context$2$0.prev = context$2$0.next) {
+        case 0:
+context$2$0.next = 2;
+return _regeneratorRuntime.awrap(this.<span class="apidocCodeKeywordSpan">dependencies</span>());
+
+        case 2:
+context$2$0.t0 = Boolean;
+
+context$2$0.t1 = function (packageJson) {
+  return 'style' in packageJson;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.installedPackagesLookup" id="apidoc.element.dr-frankenstyle.dependency_graph.prototype.installedPackagesLookup">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>installedPackagesLookup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function installedPackagesLookup() {
+  var _this2 = this;
+
+  return new _Promise(function callee$2$0(resolve, reject) {
+    var packageJsonPaths, readJson, doneFiles, BatchSize;
+    return _regeneratorRuntime.async(function callee$2$0$(context$3$0) {
+      while (1) switch (context$3$0.prev = context$3$0.next) {
+        case 0:
+          context$3$0.next = 2;
+          return _regeneratorRuntime.awrap(glob('**/node_modules/*/package.json', {
+            cwd: this.rootPackageDir,
+
+            // To enable dr-frankenstyle to detect npm linked packages
+            // Note: we couldn't figure out how to test this
+            follow: true
+          }));
+
+        case 2:
+          packageJsonPaths = context$3$0.sent;
+          readJson = this.readJson.bind(this);
+          doneFiles = 0;
+          BatchSize = 50;
+
+          _eventStream2['default'].readable(function callee$3$0(count, callback) {
+            var data;
+            return _regeneratorRuntime.async(function callee$3$0$(context$4$0) {
+              while (1) switch (context$4$0.prev = context$4$0.next) {
+                case 0:
+                  if (!(count &gt;= packageJsonPaths.length)) {
+                    context$4$0.next = 4;
+                    break;
+                  }
+
+                  if (!(doneFiles === packageJsonPaths.length)) {
+                    context$4$0.next = 3;
+                    break;
+                  }
+
+                  return context$4$0.abrupt('return', this.emit('end'));
+
+                case 3:
+                  return context$4$0.abrupt('return', callback());
+
+                case 4:
+
+                  if (count &lt; doneFiles + BatchSize) {
+                    callback();
+                  }
+                  context$4$0.next = 7;
+                  return _regeneratorRuntime.awrap(readJson(packageJsonPaths[count]));
+
+                case 7:
+                  data = context$4$0.sent;
+
+                  this.emit('data', data);
+                  doneFiles++;
+                  // If you do not wait for the file to read before calling the callback,
+                  // you may hit the open file limit on certain machines, like concourse.
+                  callback();
+
+                case 11:
+                case 'end':
+                  return context$4$0.stop();
+              }
+            }, null, this);
+          }).pipe(_eventStream2['default'].writeArray(function (err, packageJsons) {
+            if (err) reject(err);
+            resolve(packageJsons.filter(Boolean).reduce(function (lookupTable, pkg) {
+              lookupTable[pkg.name] = pkg;
+              return lookupTable;
+            }, {}));
+          }));
+
+        case 7:
+        case 'end':
+          return context$3$0.stop();
+      }
+    }, null, _this2);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        case 0:
+context$2$0.next = 2;
+return _regeneratorRuntime.awrap(this.readJson('package.json'));
+
+        case 2:
+rootPackageJson = context$2$0.sent;
+context$2$0.next = 5;
+return _regeneratorRuntime.awrap(this.<span class="apidocCodeKeywordSpan">installedPackagesLookup</span>());
+
+        case 5:
+installedPackagesLookup = context$2$0.sent;
+
+if (this.whitelist !== null) {
+  for (pkg in rootPackageJson.dependencies) {
+    if (this.whitelist.indexOf(pkg) === -1) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.orderedStyleDependencies" id="apidoc.element.dr-frankenstyle.dependency_graph.prototype.orderedStyleDependencies">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>orderedStyleDependencies
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function orderedStyleDependencies() {
+  var dag, installedPackagesLookup, styleDependencyLookup, packageNames, _iterator2, _isArray2, _i2, _ref2, packageName, _iterator3
+, _isArray3, _i3, _ref3, dependency, result;
+
+  return _regeneratorRuntime.async(function orderedStyleDependencies$(context$2$0) {
+    while (1) switch (context$2$0.prev = context$2$0.next) {
+      case 0:
+        dag = new _dagMap2['default']();
+        context$2$0.next = 3;
+        return _regeneratorRuntime.awrap(this.installedPackagesLookup());
+
+      case 3:
+        installedPackagesLookup = context$2$0.sent;
+        context$2$0.next = 6;
+        return _regeneratorRuntime.awrap(this.styleDependencyLookup());
+
+      case 6:
+        styleDependencyLookup = context$2$0.sent;
+        packageNames = _Object$keys(styleDependencyLookup);
+        _iterator2 = packageNames, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _getIterator
+(_iterator2);
+
+      case 9:
+        if (!_isArray2) {
+          context$2$0.next = 15;
+          break;
+        }
+
+        if (!(_i2 &gt;= _iterator2.length)) {
+          context$2$0.next = 12;
+          break;
+        }
+
+        return context$2$0.abrupt('break', 38);
+
+      case 12:
+        _ref2 = _iterator2[_i2++];
+        context$2$0.next = 19;
+        break;
+
+      case 15:
+        _i2 = _iterator2.next();
+
+        if (!_i2.done) {
+          context$2$0.next = 18;
+          break;
+        }
+
+        return context$2$0.abrupt('break', 38);
+
+      case 18:
+        _ref2 = _i2.value;
+
+      case 19:
+        packageName = _ref2;
+
+        dag.add(packageName);
+        _iterator3 = styleDependencyLookup[packageName], _isArray3 = Array.isArray(_iterator3), _i3 = 0, _iterator3 = _isArray3 ?
+_iterator3 : _getIterator(_iterator3);
+
+      case 22:
+        if (!_isArray3) {
+          context$2$0.next = 28;
+          break;
+        }
+
+        if (!(_i3 &gt;= _iterator3.length)) {
+          context$2$0.next = 25;
+          break;
+        }
+
+        return context$2$0.abrupt('break', 36);
+
+      case 25:
+        _ref3 = _iterator3[_i3++];
+        context$2$0.next = 32;
+        break;
+
+      case 28:
+        _i3 = _iterator3.next();
+
+        if (!_i3.done) {
+          context$2$0.next = 31;
+          break;
+        }
+
+        return context$2$0.abrupt('break', 36);
+
+      case 31:
+        _ref3 = _i3.value;
+
+      case 32:
+        dependency = _ref3;
+
+        dag.addEdge(dependency, packageName);
+
+      case 34:
+        context$2$0.next = 22;
+        break;
+
+      case 36:
+        context$2$0.next = 9;
+        break;
+
+      case 38:
+        result = [];
+
+        dag.topsort(function (vertex) {
+          return result.push(vertex.name);
+        });
+        return context$2$0.abrupt('return', result.map(function (packageName) {
+          return installedPackagesLookup[packageName];
+        }));
+
+      case 41:
+      case 'end':
+        return context$2$0.stop();
+    }
+  }, null, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var dependencies, _iterator, _isArray, _i, _ref, packageJson, cssPath;
+
+    return _regeneratorRuntime.async(function callee$1$0$(context$2$0) {
+      while (1) switch (context$2$0.prev = context$2$0.next) {
+case 0:
+  context$2$0.prev = 0;
+  context$2$0.next = 3;
+  return _regeneratorRuntime.awrap(new _dependency_graph2['default'](whitelist).<span class="apidocCodeKeywordSpan">orderedStyleDependencies
+</span>());
+
+case 3:
+  dependencies = context$2$0.sent;
+  _iterator = dependencies, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _getIterator(_iterator
+);
+
+case 5:
+  if (!_isArray) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.readJson" id="apidoc.element.dr-frankenstyle.dependency_graph.prototype.readJson">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>readJson
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readJson() {
+  var _this = this;
+
+  for (var _len = arguments.length, paths = Array(_len), _key = 0; _key &lt; _len; _key++) {
+    paths[_key] = arguments[_key];
+  }
+
+  return new _Promise(function callee$2$0(resolve) {
+    var packageJsonPath, packageJson;
+    return _regeneratorRuntime.async(function callee$2$0$(context$3$0) {
+      while (1) switch (context$3$0.prev = context$3$0.next) {
+        case 0:
+          context$3$0.prev = 0;
+          packageJsonPath = _path2['default'].resolve.apply(_path2['default'], [this.rootPackageDir].concat(paths));
+          context$3$0.t0 = JSON;
+          context$3$0.next = 5;
+          return _regeneratorRuntime.awrap(_fsPromise2['default'].readFile(packageJsonPath, 'utf8'));
+
+        case 5:
+          context$3$0.t1 = context$3$0.sent;
+          packageJson = context$3$0.t0.parse.call(context$3$0.t0, context$3$0.t1);
+
+          packageJson.path = _path2['default'].dirname(packageJsonPath);
+          resolve(packageJson);
+          context$3$0.next = 14;
+          break;
+
+        case 11:
+          context$3$0.prev = 11;
+          context$3$0.t2 = context$3$0['catch'](0);
+
+          resolve(null);
+
+        case 14:
+        case 'end':
+          return context$3$0.stop();
+      }
+    }, null, _this, [[0, 11]]);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  DependencyGraph.prototype.dependencies = function dependencies() {
+    var rootPackageJson, installedPackagesLookup, pkg, result, packagesToCheck, _iterator, _isArray, _i, _ref, dependencyName, dependency
+;
+
+    return _regeneratorRuntime.async(function dependencies$(context$2$0) {
+      while (1) switch (context$2$0.prev = context$2$0.next) {
+case 0:
+  context$2$0.next = 2;
+  return _regeneratorRuntime.awrap(this.<span class="apidocCodeKeywordSpan">readJson</span>('package.json'));
+
+case 2:
+  rootPackageJson = context$2$0.sent;
+  context$2$0.next = 5;
+  return _regeneratorRuntime.awrap(this.installedPackagesLookup());
+
+case 5:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.styleDependencies" id="apidoc.element.dr-frankenstyle.dependency_graph.prototype.styleDependencies">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>styleDependencies
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function styleDependencies() {
+  return _regeneratorRuntime.async(function styleDependencies$(context$2$0) {
+    while (1) switch (context$2$0.prev = context$2$0.next) {
+      case 0:
+        context$2$0.next = 2;
+        return _regeneratorRuntime.awrap(this.dependencies());
+
+      case 2:
+        context$2$0.t0 = Boolean;
+
+        context$2$0.t1 = function (packageJson) {
+          return 'style' in packageJson;
+        };
+
+        return context$2$0.abrupt('return', context$2$0.sent.filter(context$2$0.t0).filter(context$2$0.t1));
+
+      case 5:
+      case 'end':
+        return context$2$0.stop();
+    }
+  }, null, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  DependencyGraph.prototype.styleDependencyLookup = function styleDependencyLookup() {
+    var styleDependencies, styleDependencyNames;
+    return _regeneratorRuntime.async(function styleDependencyLookup$(context$2$0) {
+      while (1) switch (context$2$0.prev = context$2$0.next) {
+case 0:
+  context$2$0.next = 2;
+  return _regeneratorRuntime.awrap(this.<span class="apidocCodeKeywordSpan">styleDependencies</span>());
+
+case 2:
+  context$2$0.t0 = Boolean;
+  styleDependencies = context$2$0.sent.filter(context$2$0.t0);
+  styleDependencyNames = styleDependencies.map(function (pkg) {
+    return pkg.name;
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.dependency_graph.prototype.styleDependencyLookup" id="apidoc.element.dr-frankenstyle.dependency_graph.prototype.styleDependencyLookup">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.dependency_graph.prototype.</span>styleDependencyLookup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function styleDependencyLookup() {
+  var styleDependencies, styleDependencyNames;
+  return _regeneratorRuntime.async(function styleDependencyLookup$(context$2$0) {
+    while (1) switch (context$2$0.prev = context$2$0.next) {
+      case 0:
+        context$2$0.next = 2;
+        return _regeneratorRuntime.awrap(this.styleDependencies());
+
+      case 2:
+        context$2$0.t0 = Boolean;
+        styleDependencies = context$2$0.sent.filter(context$2$0.t0);
+        styleDependencyNames = styleDependencies.map(function (pkg) {
+          return pkg.name;
+        });
+        return context$2$0.abrupt('return', styleDependencies.reduce(function (lookupTable, pkg) {
+          lookupTable[pkg.name] = _Object$keys(Object(pkg.dependencies)).filter(function (dependencyName) {
+            return styleDependencyNames.indexOf(dependencyName) &gt;= 0;
+          });
+          return lookupTable;
+        }, {}));
+
+      case 6:
+      case 'end':
+        return context$2$0.stop();
+    }
+  }, null, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  dag = new _dagMap2['default']();
+  context$2$0.next = 3;
+  return _regeneratorRuntime.awrap(this.installedPackagesLookup());
+
+case 3:
+  installedPackagesLookup = context$2$0.sent;
+  context$2$0.next = 6;
+  return _regeneratorRuntime.awrap(this.<span class="apidocCodeKeywordSpan">styleDependencyLookup</span>());
+
+case 6:
+  styleDependencyLookup = context$2$0.sent;
+  packageNames = _Object$keys(styleDependencyLookup);
+  _iterator2 = packageNames, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _getIterator(
+_iterator2);
+
+case 9:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dr-frankenstyle.index" id="apidoc.module.dr-frankenstyle.index">module dr-frankenstyle.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.index.copyAssets" id="apidoc.element.dr-frankenstyle.index.copyAssets">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.index.</span>copyAssets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function copyAssets() {
+  var assetRenameTableStream = _streamReduce2['default'](function (memo, file) {
+    if (_path2['default'].basename(file.path) === 'asset-rename-table.json') {
+      return JSON.parse(file.contents.toString());
+    } else {
+      return memo;
+    }
+  }, null);
+
+  var copyAssetsStream = _through22['default'].obj(function callee$1$0(renameTable, encoding, callback) {
+    var _iterator, _isArray, _i, _ref, pkg, _renameTable$pkg, baseAssetDir, assetLocationTranslation, _iterator2, _isArray2, _i2
+, _ref2, originalUrl, newUrl, existingAssetFileName, contents;
+
+    return _regeneratorRuntime.async(function callee$1$0$(context$2$0) {
+      while (1) switch (context$2$0.prev = context$2$0.next) {
+        case 0:
+          _iterator = _Object$keys(renameTable), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator :
+_getIterator(_iterator);
+
+        case 1:
+          if (!_isArray) {
+            context$2$0.next = 7;
+            break;
+          }
+
+          if (!(_i &gt;= _iterator.length)) {
+            context$2$0.next = 4;
+            break;
+          }
+
+          return context$2$0.abrupt('break', 37);
+
+        case 4:
+          _ref = _iterator[_i++];
+          context$2$0.next = 11;
+          break;
+
+        case 7:
+          _i = _iterator.next();
+
+          if (!_i.done) {
+            context$2$0.next = 10;
+            break;
+          }
+
+          return context$2$0.abrupt('break', 37);
+
+        case 10:
+          _ref = _i.value;
+
+        case 11:
+          pkg = _ref;
+          _renameTable$pkg = renameTable[pkg];
+          baseAssetDir = _renameTable$pkg.baseAssetDir;
+          assetLocationTranslation = _renameTable$pkg.assetLocationTranslation;
+          _iterator2 = _Object$keys(assetLocationTranslation), _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2
+ ? _iterator2 : _getIterator(_iterator2);
+
+        case 16:
+          if (!_isArray2) {
+            context$2$0.next = 22;
+            break;
+          }
+
+          if (!(_i2 &gt;= _iterator2.length)) {
+            context$2$0.next = 19;
+            break;
+          }
+
+          return context$2$0.abrupt('break', 35);
+
+        case 19:
+          _ref2 = _iterator2[_i2++];
+          context$2$0.next = 26;
+          break;
+
+        case 22:
+          _i2 = _iterator2.next();
+
+          if (!_i2.done) {
+            context$2$0.next = 25;
+            break;
+          }
+
+          return context$2$0.abrupt('break', 35);
+
+        case 25:
+          _ref2 = _i2.value;
+
+        case 26:
+          originalUrl = _ref2;
+          newUrl = assetLocationTranslation[originalUrl];
+          existingAssetFileName = _path2['default'].join(baseAssetDir, originalUrl);
+          context$2$0.next = 31;
+          return _regeneratorRuntime.awrap(_log_error2['default'](_fsPromise2['default'].readFile(existingAssetFileName), 'Could
+ not read asset file ' + existingAssetFileName));
+
+        case 31:
+          contents = context$2$0.sent;
+
+          this.push(new _vinyl2['default']({ path: newUrl, contents: contents }));
+
+        case 33:
+          context$2$0.next = 16;
+          break;
+
+        case 35:
+          context$2$0.next = 1;
+          break;
+
+        case 37:
+
+          callback();
+
+        case 38:
+        case 'end':
+          return context$2$0.stop();
+      }
+    }, null, this);
+  });
+
+  return _eventStream.pipeline(assetRenameTableStream, copyAssetsStream);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var _cssFilesFromDependencies2 = _interopRequireDefault(_cssFilesFromDependencies);
+
+var _dev = require('./dev');
+
+function drFrankenstyle() {
+var setupStream = _dev.setup({ cached: false });
+
+return _eventStream.merge(setupStream.pipe(_dev.<span class="apidocCodeKeywordSpan">copyAssets</span>()), setupStream.pipe(_dev.
+generateCss(_cssFilesFromDependencies2['default']())));
+}
+
+drFrankenstyle.railsUrls = function () {
+return _through22['default'].obj(function (file, encoding, callback) {
+  if (_path2['default'].extname(file.path) === '.css') {
+    var newContents = file.contents.toString().replace(/url\(/g, 'asset-url(');
+    file.contents = new Buffer(newContents);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.index.generateCss" id="apidoc.element.dr-frankenstyle.index.generateCss">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.index.</span>generateCss
+        <span class="apidocSignatureSpan">(cssFileStream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateCss(cssFileStream) {
+  var input = _eventStream.map(function (data, callback) {
+    return callback(null, data);
+  });
+
+  var renameTableStream = _streamReduce2['default'](function (memo, file) {
+    if (_path2['default'].basename(file.path) === 'asset-rename-table.json') {
+      return JSON.parse(file.contents.toString());
+    } else {
+      return memo;
+    }
+  }, null);
+
+  var cssDependenciesStream = _through22['default'].obj(function (file, encoding, callback) {
+    if (_path2['default'].basename(file.path) === 'dependencies-list.json') {
+      for (var _iterator = JSON.parse(file.contents.toString()), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray
+ ? _iterator : _getIterator(_iterator);;) {
+        var _ref;
+
+        if (_isArray) {
+          if (_i &gt;= _iterator.length) break;
+          _ref = _iterator[_i++];
+        } else {
+          _i = _iterator.next();
+          if (_i.done) break;
+          _ref = _i.value;
+        }
+
+        var dependency = _ref;
+
+        this.push(dependency);
+      }
+    }
+    callback();
+  });
+
+  var output = _eventStream.merge(input.pipe(cssDependenciesStream).pipe(cssFileStream), input.pipe(renameTableStream)).pipe(_updateAssetUrlsAndConcat2
+['default']());
+
+  return _eventStream.duplex(input, output);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var _cssFilesFromDependencies2 = _interopRequireDefault(_cssFilesFromDependencies);
+
+var _dev = require('./dev');
+
+function drFrankenstyle() {
+var setupStream = _dev.setup({ cached: false });
+
+return _eventStream.merge(setupStream.pipe(_dev.copyAssets()), setupStream.pipe(_dev.<span class="apidocCodeKeywordSpan">generateCss
+</span>(_cssFilesFromDependencies2['default']())));
+}
+
+drFrankenstyle.railsUrls = function () {
+return _through22['default'].obj(function (file, encoding, callback) {
+  if (_path2['default'].extname(file.path) === '.css') {
+    var newContents = file.contents.toString().replace(/url\(/g, 'asset-url(');
+    file.contents = new Buffer(newContents);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dr-frankenstyle.index.setup" id="apidoc.element.dr-frankenstyle.index.setup">
+        function <span class="apidocSignatureSpan">dr-frankenstyle.index.</span>setup
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setupDevelopmentCache(_ref) {
+  var _ref$cached = _ref.cached;
+  var cached = _ref$cached === undefined ? false : _ref$cached;
+
+  if (cached) {
+    return _vinylFs.src('tmp/*');
+  }
+
+  try {
+    var _JSON$parse = JSON.parse(_fs2['default'].readFileSync('.drfrankenstylerc'));
+
+    var whitelist = _JSON$parse.whitelist;
+  } catch (e) {
+    whitelist = null;
+    if (e.code !== 'ENOENT') {
+      throw e;
+    }
+  }
+
+  var cssDependenciesStream = _cssDependencies2['default'](whitelist);
+
+  var fileFromDependencyList = _eventStream.pipeline(_streamReduce2['default'](function (memo, dependency) {
+    memo.push(dependency);
+    return memo;
+  }, []), _eventStream.map(function (dependencies, callback) {
+    callback(null, new _vinyl2['default']({
+      path: 'dependencies-list.json',
+      contents: new Buffer(JSON.stringify(dependencies, null, 2))
+    }));
+  }));
+
+  var fileFromRenameTable = _eventStream.map(function (data, callback) {
+    var file = new _vinyl2['default']({ path: 'asset-rename-table.json', contents: new Buffer(JSON.stringify(data, null, 2)) });
+    callback(null, file);
+  });
+
+  var buildDependencyListFile = cssDependenciesStream.pipe(fileFromDependencyList);
+
+  var buildAssetRenameTableFile = cssDependenciesStream.pipe(_cssFilesFromDependencies2['default']()).pipe(_assetRenameTable2['default
+']()).pipe(fileFromRenameTable);
+
+  return _eventStream.merge(buildDependencyListFile, buildAssetRenameTableFile).pipe(_vinylFs.dest('tmp/'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var _cssFilesFromDependencies = require('./css-files-from-dependencies');
+
+var _cssFilesFromDependencies2 = _interopRequireDefault(_cssFilesFromDependencies);
+
+var _dev = require('./dev');
+
+function drFrankenstyle() {
+var setupStream = _dev.<span class="apidocCodeKeywordSpan">setup</span>({ cached: false });
+
+return _eventStream.merge(setupStream.pipe(_dev.copyAssets()), setupStream.pipe(_dev.generateCss(_cssFilesFromDependencies2['
+;default']())));
+}
+
+drFrankenstyle.railsUrls = function () {
+return _through22['default'].obj(function (file, encoding, callback) {
+  if (_path2['default'].extname(file.path) === '.css') {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
