@@ -1,6 +1,6 @@
 # npmdoc-dr-frankenstyle
 
-#### api documentation for  [dr-frankenstyle (v0.2.8)](https://github.com/pivotal-cf/dr-frankenstyle#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-dr-frankenstyle.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dr-frankenstyle) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dr-frankenstyle.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dr-frankenstyle)
+#### basic api documentation for  [dr-frankenstyle (v0.2.8)](https://github.com/pivotal-cf/dr-frankenstyle#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-dr-frankenstyle.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dr-frankenstyle) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dr-frankenstyle.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dr-frankenstyle)
 
 #### Resolves CSS dependencies between node packages
 
